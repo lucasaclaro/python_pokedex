@@ -1,5 +1,6 @@
 import tkinter
 from tkinter import *
+from tkinter import messagebox
 from functions import *
 
 
@@ -13,18 +14,13 @@ background_master = Label(master, image=background)
 background_master.pack()
 
 
-poke_id = 25
 
-
-
-text_choose = Label(master, text="Who is that Pokemon?",  font=('Verdana', 12, 'bold'), bg='black', fg='white', justify=CENTER)
-text_choose.place(width=300, height=30, x=200, y=250)
 
 text_choose = Label(master, text="Choose id between 1 - 151",  font=('Verdana', 12, 'bold'), bg='black', fg='white', justify=CENTER)
-text_choose.place(width=300, height=30, x=200, y=300)
+text_choose.place(width=300, height=30, x=170, y=350)
 
 entry_id = Entry(master, font=('Verdana', 8, 'bold'), bg='white', fg='#000000', justify=CENTER)
-entry_id.place(width=100, height=30, x=300, y=360)
+entry_id.place(width=100, height=30, x=270, y=400)
 
 
 
@@ -39,7 +35,7 @@ def choose_pokemon():
     background_master2 = Label(master2, image=background2)
     background_master2.pack()
 
-    poke_id = str(entry_id.get())
+    poke_id = int(entry_id.get())
 
     id2 = Label(master2, text=f"#ID {pokemon_id(poke_id)}", font=('Verdana', 12, 'bold'), fg='white', background='black')
     id2.place(width=345, height=50, x=200, y=300)
@@ -59,15 +55,18 @@ def choose_pokemon():
     move22 = Label(master2, text=pokemon_move2(poke_id), font=('Verdana', 14, 'bold'), fg='white', background='black')
     move22.place(width=345, height=50, x=200, y=600)
 
-    image_pokemon_ = PhotoImage(file=f'images/{poke_id}.png')
-    image_master_ = Label(master2, image=image_pokemon_, background='black')
-    image_master_.place(width=450, height=500, x=652, y=250)
+    if poke_id > 152:
+        messagebox.showinfo(title='Error!', message='Choose ID between 1 - 151.')
+    else:
+        image_pokemon_ = PhotoImage(file=f'images/{poke_id}.png')
+        image_master_ = Label(master2, image=image_pokemon_, background='black')
+        image_master_.place(width=450, height=500, x=652, y=250)
 
     master2.mainloop()
 
 
 button_choose = Button(master, text='GO!', font=('Verdana', 14, 'bold'), bg='#A6A6A6', command=choose_pokemon)
-button_choose.place(width=100, height=40, x=300, y=450)
+button_choose.place(width=100, height=40, x=270, y=500)
 
 
 
