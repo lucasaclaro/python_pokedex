@@ -62,12 +62,21 @@ def pokemon_type(id):
     pokemon_type = request_json['types'][0]['type']['name']
     return pokemon_type.upper()
 
+
 def pokemon_move(id):
     link = f'https://pokeapi.co/api/v2/pokemon/{id}'
     request = requests.get(link)
     request_json = request.json()
     pokemon_move = request_json['moves'][0]['move']['name']
     return pokemon_move.upper()
+
+def pokemon_move2(id):
+    link = f'https://pokeapi.co/api/v2/pokemon/{id}'
+    request = requests.get(link)
+    request_json = request.json()
+    pokemon_move2 = request_json['moves'][1]['move']['name']
+    return pokemon_move2.upper()
+
 
 def pokemon_image(id):
     link = f'https://pokeapi.co/api/v2/pokemon/{id}'
