@@ -1,6 +1,10 @@
 # python_pokedex
+
+  <img align="center" alt="Python" height="30" width="40" src="python_pokedex/images/image01.png">
  
- 
+# Language
+  <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+
  
 ## Libraries 📖
 
@@ -10,7 +14,7 @@ Pillow
 Urllib
 
 
-
+python_pokedex/images/image01.png
 
 ## Step by step 👣
 
