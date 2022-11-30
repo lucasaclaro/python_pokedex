@@ -12,7 +12,7 @@ Urllib
 
 
 
-## Step by step 👣👣
+## Step by step 👣
 
 Create the link for request: link = f'https://pokeapi.co/api/v2/pokemon/{pokemon_}'
 Extract file .json
