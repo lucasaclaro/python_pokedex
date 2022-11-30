@@ -1,6 +1,7 @@
 # python_pokedex
 
   <img align="center" alt="Python" height="600" width="800" src="https://github.com/lucasaclaro/python_pokedex/blob/main/images/image01.png">
+  <img align="center" alt="Python" height="600" width="800" src="https://github.com/lucasaclaro/python_pokedex/blob/main/images/image04.png">
  
 # Language
   <img align="center" alt="Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
